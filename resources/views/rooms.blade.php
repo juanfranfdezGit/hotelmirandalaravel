@@ -17,39 +17,6 @@
 </head>
 <body>
 
-    <header class="header">
-        <span class="header__span">We Make Your Feel Comfortable</span>
-        <div class="header__nav">
-            <div id="hamburguerMenu" class="header__nav__hamburguer">
-                <span class="header__nav__hamburguer__bar"></span>
-                <span class="header__nav__hamburguer__bar"></span>
-                <span class="header__nav__hamburguer__bar"></span>
-            </div>
-            <a href="./index.html"><img class="header__nav__logo" src="/assets/logo.svg" alt="Hotel Miranda"></a>
-            <nav class="header__nav__menu">
-                <ul class="header__nav__menu__list">
-                    <li class="header__nav__menu__list__item"><a href="about.html">About Us</a></li>
-                    <li class="header__nav__menu__list__item"><a href="rooms.html">Rooms</a></li>
-                    <li class="header__nav__menu__list__item"><a href="offers.html">Offers</a></li>
-                    <li class="header__nav__menu__list__item"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__actions">
-            <img src="/assets/icos/user.svg" alt="User Ico">
-            <img src="/assets/icos/search.svg" alt="Search Ico">
-        </div>
-    </header>
-
-    <div id="overlay" class="overlay">
-        <ul class="overlay__list">
-            <li class="overlay__list__item"><a href="./about.html">About Us</a></li>
-            <li class="overlay__list__item"><a href="./rooms.html">Rooms</a></li>
-            <li class="overlay__list__item"><a href="./offers.html">Offers</a></li>
-            <li class="overlay__list__item"><a href="./contact.html">Contact</a></li>
-        </ul>
-    </div>
-
     <section class="title">
         <span class="title__span">the ultimate luxury</span>
         <h1 class="title__title">ultimate room</h1>
@@ -232,5 +199,5 @@
     
 </body>
 </html>
-<script type="module" src="/js/rooms.js"></script>
+<script type="module" src="{{ asset('js/rooms.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

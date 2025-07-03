@@ -1,0 +1,87 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.popularRooms {
+    padding: 100px 20px 10px;
+    position: relative;
+    background: $black900;
+    text-align: center;
+
+    &__span {
+        @include font($roboto, 14px, 400, 30px, $mainColor);
+        letter-spacing: 2.8px;
+    }
+
+    &__title {
+        @include font($old, 40px, 400, 30px, $white900);
+        margin: 28px 0 48px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 485px;
+    }
+
+    .swiper-slide {        
+        img {
+            width: 100%;
+            height: 50%;
+        }
+
+        .popularRooms__info {
+            @include set-flex(flex-start, center, column);
+            background: $white900;
+            margin-top: -10px;
+            gap: 20px;
+            padding: 80px 20px;
+
+            &__title {
+                @include font($old, 24px, 400, 24px, $black900);
+            }
+
+            &__description {
+                opacity: .7;
+            }
+
+            &__actions {
+                @include set-flex(center, center, row);
+
+                &__price {
+                    @include font($roboto, 16px, 400, 100%, $mainColor);
+
+                    a {
+                        margin-left: 20px;
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+
+        .popularRooms__icons {
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 22;
+            @include set-flex(center, center, row);
+            gap: 12px;
+            background: $white900;
+            padding: 1rem 5rem;
+        }
+    }   
+}
+
+@media (min-width: 1000px) {
+    .popularRooms {
+        padding: 100px 20px 120px;
+
+        .swiper {
+            margin: 0 auto;
+            width: 80%;
+        }
+    
+        .swiper-slide {        
+            margin-left: 20px;
+        }   
+    }
+}

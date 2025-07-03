@@ -1,0 +1,39 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.datas {
+    background: $black900;
+    @include set-flex(center, center, column);
+    padding: 50px 0;
+    gap: 60px;
+
+    &__item {
+        @include set-flex(center, center, column);
+
+        &__image {
+            margin-bottom: 50px
+        }
+
+        &__title {
+            @include font($roboto, 60px, 700, 1.4rem, $white900);
+            margin-bottom: 12px;
+        }
+
+        &__description {
+            @include font($roboto, 16px, 400, 1.4rem, $white400);
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .datas {
+        @include set-flex(center, center, row);
+        margin: 0 5vw;
+        gap: 100px;
+
+        &__item {
+            @include set-flex(center, flex-start, column);
+        }
+    }
+}

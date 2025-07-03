@@ -1,0 +1,97 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'common/header';
+@use 'common/footer';
+@use 'common/features';
+@use 'common/title';
+@use 'home/banner';
+@use 'home/aboutus';
+@use 'home/rooms';
+@use 'home/video';
+@use 'home/foods';
+@use 'home/datas';
+@use 'about/aboutVideo';
+@use 'about/restaurant';
+@use 'about/facts';
+@use 'rooms/roomsGrid';
+@use 'roomDetails/details';
+@use 'roomDetails/availabilityDetails';
+@use 'roomDetails/ameneties';
+@use 'roomDetails/client';
+@use 'roomDetails/cancellation';
+@use 'roomDetails/relatedRooms';
+@use 'offers/offersGrid';
+@use 'offers/popularList';
+@use 'contact/contactList';
+@use 'contact/map';
+@use 'contact/form';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+h1 {
+    @include font($old, 56px, 400, 60px, $white900);
+    text-transform: capitalize;
+}
+
+h2 {
+    @include font($old, 56px, 400, 60px, $black900);
+    text-transform: capitalize;
+}
+
+h3 {
+    @include font($old, 30px, 400, 30px, $black900);
+    text-transform: capitalize;
+}
+
+p {
+    @include font($roboto, 14px, 400, 24px, $black700);
+}
+
+li {
+    list-style: none;
+    @include font($roboto, 16px, 600, 1rem, $black900);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: $black900;
+}
+
+span {
+    @include font($roboto, 16px, 400, 1rem, $white900);
+    text-transform: uppercase
+}
+
+label {
+    @include font($roboto, 16px, 700, 1rem, $white900);
+}
+
+.button {
+    @include font($roboto, 14px, 700, 1rem, $white900);
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    background: none;
+    border: solid 2px $white400;
+    padding: 20px 40px;
+    cursor: pointer;
+    min-width: 224px;
+
+    &-solid {
+        background: $mainColor;
+        border: 2px solid $mainColor;
+    }
+}
